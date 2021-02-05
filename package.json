@@ -5,15 +5,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel serve ./src/index.html -d ./serve",
+    "dev": "parcel serve ./src/index.html -d ./serve -p 5000",
     "build": "parcel build ./src/index.html -d ./build --no-cache --no-source-maps --public-url ./"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "parcel": "^1.12.4",
-    "sass": "^1.32.5"
+    "sass": "^1.32.6"
   }
 }
