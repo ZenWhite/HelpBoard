@@ -1,5 +1,6 @@
-@import '~normalize.css'
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap')
 @import 'variables'
+@import 'mixins'
 
 * 
   margin: 0
@@ -8,10 +9,23 @@
 
 
 :root 
-  font-family: sans-serif
-  color: #ffffff
+  font-family: Montserrat, sans-serif
+  color: $black
 
 
 #root 
   min-height: 100vh
-  background-color: #2b2b2b
+  background-color: $background-color
+
+
+.ticket
+  @include ticket-text
+
+.column-title 
+  @include column-title
+
+.label
+  @include label
+
+.board-title
+  @include board-title
