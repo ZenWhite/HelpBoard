@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap')
+@import 'variables'
+@import 'mixins'
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+
+:root 
+  font-family: Montserrat, sans-serif
+  color: $black
+
+
+#root 
+  min-height: 100vh
+  background-color: $background-color
+
+
+.ticket
+  @include ticket-text
+
+.column-title 
+  @include column-title
+
+.label
+  @include label
+
+.board-title
+  @include board-title
