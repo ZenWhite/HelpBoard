@@ -9,11 +9,15 @@
     "build": "parcel build ./src/index.html -d ./build --no-cache --no-source-maps --public-url ./"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "classnames": "^2.2.6",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.13",
     "parcel": "^1.12.4",
     "sass": "^1.32.6"
   }

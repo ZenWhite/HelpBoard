@@ -1,22 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap')
 @import 'variables'
 @import 'mixins'
+
+@import 'components/board-column'
+@import 'components/board-card'
 
 * 
   margin: 0
   padding: 0
   box-sizing: border-box
 
-
 :root 
   font-family: Montserrat, sans-serif
   color: $black
 
+::selection
+  background: $black
+  color: $white
 
 #root 
   min-height: 100vh
-  background-color: $background-color
+  background: url('../images/home.png') no-repeat bottom right, $background-color
 
+h1 
+  margin-top: 0
 
 .ticket
   @include ticket-text
@@ -29,3 +35,14 @@
 
 .board-title
   @include board-title
+
+.wrap
+  max-width: 1280px
+  margin: 0 auto
+
+.page
+  padding-top: 40px
+
+.flex
+  display: flex
+  

@@ -1,0 +1,20 @@
+.board-column
+    min-width: 300px
+    padding: 10px
+    background: $todo-color
+    border-radius: 4px
+
+    &.todo 
+        background: $todo-color
+    &.progress
+        background: $progress-color
+    &.review
+        background: $review-color
+    &.done
+        background: $done-color
+
+    &:not(:last-child)
+        margin-right: 35px
+
+    &__title
+        @include column-title        
