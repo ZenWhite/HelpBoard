@@ -5,12 +5,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel serve ./src/index.html -d ./serve -p 5000",
-    "build": "parcel build ./src/index.html -d ./build --no-cache --no-source-maps --public-url ./"
+    "start:server": "parcel serve ./server/src/server.js -d ./serve/server",
+    "build:server": "parcel build ./server/src/server.js -d ./build/server --no-cache --no-source-maps --public-url ./",
+    "start:client": "parcel serve ./client/src/index.html -d ./serve/client",
+    "build:client": "parcel build ./client/src/index.html -d ./build --no-cache --no-source-maps --public-url ./"
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.13",
-    "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
