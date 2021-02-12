@@ -8,7 +8,8 @@
     "start:server": "parcel serve ./server/src/server.js -d ./serve/server",
     "build:server": "parcel build ./server/src/server.js -d ./build/server --no-cache --no-source-maps --public-url ./",
     "start:client": "parcel serve ./client/src/index.html -d ./serve/client",
-    "build:client": "parcel build ./client/src/index.html -d ./build --no-cache --no-source-maps --public-url ./"
+    "build:client": "parcel build ./client/src/index.html -d ./build --no-cache --no-source-maps --public-url ./",
+    "write": "prettier --write ./**/*.{js,jsx}"
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.13",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "parcel": "^1.12.4",
+    "prettier": "^2.2.1",
     "sass": "^1.32.6"
   }
 }

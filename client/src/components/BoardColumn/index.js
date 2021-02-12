@@ -1,2 +1,2 @@
-import {BoardColumn} from './BoardColumn'
-export {BoardColumn}
+import { BoardColumn } from './BoardColumn'
+export { BoardColumn }

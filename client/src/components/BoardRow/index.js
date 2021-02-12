@@ -1,2 +1,2 @@
-import {BoardRow} from './BoardRow'
-export {BoardRow}
+import { BoardRow } from './BoardRow'
+export { BoardRow }
