@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database/div.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model CardList {
+  id        String   @unique @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cards CardItem[]
+
+  @@map("lists")
+}
+
+model CardItem {
+  id        String   @unique @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  status     String
+  CardList   CardList? @relation(fields: [cardListId], references: [id])
+  cardListId String?
+
+  @@map("cards")
+}

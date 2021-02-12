@@ -1,5 +1,6 @@
 import express from 'express'
-import { routes } from './routes'
+import { routes } from './routes.js'
+import './services/prisma/module.js'
 
 const server = express()
 
