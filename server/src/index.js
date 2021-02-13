@@ -7,6 +7,9 @@ import { cardlist } from './modules/cardlist/cardlist.module.js'
 
 const app = express()
 
+app.use(express.json({ extended: true }))
+app.use(express.urlencoded({ extended: true }))
+
 const modules = {
   server,
   card,

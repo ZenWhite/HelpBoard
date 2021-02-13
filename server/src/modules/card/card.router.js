@@ -1,4 +1,5 @@
 import express from 'express'
+import { cardService } from './card.service.js'
 
 const router = express.Router()
 
@@ -9,11 +10,17 @@ const routes = {
 }
 
 router
-  .get(routes.base, (request, response) => {
-    response.json({ message: 'read card' })
+  .get(routes.base, async (request, response) => {
+    const cards = await cardService.readAll()
+
+    if (cards) return response.json({ cards })
+    else return 'There is no cards!'
   })
-  .post(routes.create, (request, response) => {
-    response.json({ message: 'create card' })
+  .post(routes.create, async (request, response) => {
+    const card = await cardService.createOne(request.body)
+
+    if (card) return response.json({ card })
+    else return "Can't create card"
   })
   .put(routes.update, (request, response) => {
     response.json({ message: 'update card' })
