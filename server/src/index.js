@@ -9,6 +9,10 @@ const app = express()
 
 app.use(express.json({ extended: true }))
 app.use(express.urlencoded({ extended: true }))
+app.use((request, response, next) => {
+  response.header('Access-Control-Allow-Origin', '*')
+  next()
+})
 
 const modules = {
   server,
