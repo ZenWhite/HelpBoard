@@ -1,3 +1,5 @@
 export const routes = {
-  home: '/'
+  server: '/',
+  card: '/card',
+  cardlist: '/cardlist'
 }

@@ -4,15 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start:server": "parcel serve ./server/src/server.js -d ./serve/server",
-    "build:server": "parcel build ./server/src/server.js -d ./build/server --no-cache --no-source-maps --public-url ./",
+    "start:server": "node ./server/src/index.js",
+    "build:server": "parcel build ./server/src/server.js -d ./build/server --no-cache --no-source-maps",
     "start:client": "parcel serve ./client/src/index.html -d ./serve/client",
     "build:client": "parcel build ./client/src/index.html -d ./build --no-cache --no-source-maps --public-url ./",
     "write": "prettier --write ./**/*.{js,jsx}"
   },
   "dependencies": {
     "@babel/preset-react": "^7.12.13",
+    "@prisma/client": "^2.16.1",
     "express": "^4.17.1",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
@@ -23,6 +25,7 @@
     "@babel/core": "^7.12.13",
     "parcel": "^1.12.4",
     "prettier": "^2.2.1",
+    "prisma": "^2.16.1",
     "sass": "^1.32.6"
   }
 }

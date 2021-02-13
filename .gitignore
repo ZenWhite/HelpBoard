@@ -7,3 +7,7 @@ serve
 /*/build
 /*/.cache
 /*/serve
+
+# db
+server/prisma/database
+server/prisma/migrations
