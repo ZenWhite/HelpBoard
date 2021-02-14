@@ -32,9 +32,13 @@ async function updateOne(id, data) {
 }
 
 async function deleteOne(id) {
-  return await database.board.delete({
-    where: { id }
-  })
+  const board = await readOne(id)
+
+  return board
+    ? await database.board.delete({
+        where: { id }
+      })
+    : null
 }
 
 export const boardService = {

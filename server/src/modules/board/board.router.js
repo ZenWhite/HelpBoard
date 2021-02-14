@@ -1,4 +1,5 @@
 import express from 'express'
+import feedback from '../../misc/feedback.js'
 import { boardService } from './board.service.js'
 
 const router = express.Router()
@@ -35,6 +36,15 @@ router
     return board
       ? response.json({ board })
       : response.send(feedback.notUpdated(`board with id ${id}`))
+  })
+  .delete('/:id/delete', async (request, response) => {
+    const { id } = request.params
+
+    const board = await boardService.deleteOne(id)
+
+    return board
+      ? response.json({ board })
+      : response.send(feedback.notDeleted(`board with id ${id}`))
   })
 
 export { router }
