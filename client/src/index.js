@@ -1,5 +1,5 @@
 import 'normalize.css'
-import './styles/index.sass'
+import './index.sass'
 
 import ReactDOM from 'react-dom'
 import React from 'react'
