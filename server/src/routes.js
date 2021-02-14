@@ -1,5 +1,6 @@
 export const routes = {
   server: '/',
-  card: '/card',
-  cardlist: '/cardlist'
+  task: '/tasks',
+  tasklist: '/tasklists',
+  board: '/boards'
 }

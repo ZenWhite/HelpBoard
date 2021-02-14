@@ -10,13 +10,13 @@ const routes = {
 
 router
   .get(routes.base, (request, response) => {
-    response.json({ message: 'read cardlist' })
+    response.json({ message: 'read tasklist' })
   })
   .post(routes.create, (request, response) => {
-    response.json({ message: 'create cardlist' })
+    response.json({ message: 'create tasklist' })
   })
   .put(routes.update, (request, response) => {
-    response.json({ message: 'update cardlist' })
+    response.json({ message: 'update tasklist' })
   })
 
 export { router }

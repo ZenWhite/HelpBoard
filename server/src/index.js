@@ -2,8 +2,9 @@ import express from 'express'
 import bootstrap from './misc/bootstrap.js'
 
 import { server } from './modules/server/server.module.js'
-import { card } from './modules/card/card.module.js'
-import { cardlist } from './modules/cardlist/cardlist.module.js'
+import { task } from './modules/task/task.module.js'
+import { tasklist } from './modules/tasklist/tasklist.module.js'
+import { board } from './modules/board/board.module.js'
 
 const app = express()
 
@@ -16,8 +17,9 @@ app.use((request, response, next) => {
 
 const modules = {
   server,
-  card,
-  cardlist
+  task,
+  tasklist,
+  board
 }
 
 bootstrap(app, modules, (PORT) =>

@@ -10,24 +10,38 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model cardlist {
+model task {
   id        String   @unique @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  title String
+  title       String? @default("task")
+  description String  @default("description")
+  label       String? @default("todo")
+  status      String  @default("active")
 
-  cards card[]
+  tasklist   tasklist? @relation(fields: [tasklistId], references: [id])
+  tasklistId String?
 }
 
-model card {
+model tasklist {
   id        String   @unique @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  title      String
-  label      String?
-  status     String
-  cardlist   cardlist? @relation(fields: [cardlistId], references: [id])
-  cardlistId String?
+  title String? @default("list")
+
+  tasks   task[]
+  board   board?  @relation(fields: [boardId], references: [id])
+  boardId String?
+}
+
+model board {
+  id        String   @unique @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  title String? @default("oard")
+
+  lists tasklist[]
 }
