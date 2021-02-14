@@ -4,12 +4,12 @@
 @import 'components/board-column'
 @import 'components/board-card'
 
-* 
+*
   margin: 0
   padding: 0
   box-sizing: border-box
 
-:root 
+:root
   font-family: Montserrat, sans-serif
   color: $black
 
@@ -17,17 +17,17 @@
   background: $black
   color: $white
 
-#root 
+#root
   min-height: 100vh
-  background: url('../images/home.png') no-repeat bottom right, $background-color
+  // background: url('../images/home.png') no-repeat bottom right, $background-color
 
-h1 
+h1
   margin-top: 0
 
 .ticket
   @include ticket-text
 
-.column-title 
+.column-title
   @include column-title
 
 .label
@@ -45,4 +45,3 @@ h1
 
 .flex
   display: flex
-  
