@@ -1,29 +1,46 @@
 import express from 'express'
+import feedback from '../../misc/feedback.js'
 import { taskService } from './task.service.js'
 
 const router = express.Router()
 
-const routes = {
-  base: '/',
-  create: '/create',
-  update: '/update'
-}
-
 router
-  .get(routes.base, async (request, response) => {
+  .get('/', async (request, response) => {
     const tasks = await taskService.readAll()
 
-    if (tasks) return response.json({ tasks })
-    else return 'There is no tasks!'
+    tasks ? response.json({ tasks }) : response.send(feedback.empty('tasks'))
   })
-  .post(routes.create, async (request, response) => {
+  .get('/:id', async (request, response) => {
+    const { id } = request.params
+
+    const task = await taskService.readOne(id)
+
+    task
+      ? response.json({ task })
+      : response.send(feedback.empty(`task with id ${id}`))
+  })
+  .post('/create', async (request, response) => {
     const task = await taskService.createOne(request.body)
 
-    if (task) return response.json({ task })
-    else return "Can't create task"
+    task ? response.json({ task }) : response.send(feedback.notCreated('task'))
   })
-  .put(routes.update, (request, response) => {
-    response.json({ message: 'update task' })
+  .put('/:id/update', async (request, response) => {
+    const { id } = request.params
+
+    const task = await taskService.updateOne(id, request.body)
+
+    task
+      ? response.json({ task })
+      : response.send(feedback.notUpdated(`task with id ${id}`))
+  })
+  .delete('/:id/delete', async (request, response) => {
+    const { id } = request.params
+
+    const task = await taskService.deleteOne(id)
+
+    task
+      ? response.json({ task })
+      : response.send(feedback.notDeleted(`task with id ${id}`))
   })
 
 export { router }

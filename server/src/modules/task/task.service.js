@@ -6,6 +6,10 @@ async function readOne(id) {
   })
 }
 
+async function readAll() {
+  return await database.task.findMany()
+}
+
 async function createOne(data) {
   return await database.task.create({ data })
 }
@@ -18,17 +22,13 @@ async function updateOne(id, data) {
 }
 
 async function deleteOne(id) {
-  return await database.task.delete({
-    where: { id }
-  })
-}
+  const task = await readOne(id)
 
-async function readAll() {
-  try {
-    return await database.task.findMany()
-  } catch (error) {
-    throw error
-  }
+  return task
+    ? await database.task.delete({
+        where: { id }
+      })
+    : null
 }
 
 export const taskService = {
