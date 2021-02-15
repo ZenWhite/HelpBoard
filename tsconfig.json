@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "jsx": "react",
+        "baseUrl": "./client/src",
+        "paths": {
+          "~*": ["./*"]
+        },
+        "esModuleInterop": true
+    },
+    "include": ["client/src/**/*"],
+    "exclude": [
+      "node_modules/*",
+      ".cache",
+      "serve"
+    ]
+}

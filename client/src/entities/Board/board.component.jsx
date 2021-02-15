@@ -1,5 +1,9 @@
 import React from 'react'
 
-export const Board = () => {
-    return null
-}
+import { Title } from './Title/title.component'
+ 
+export const Board = () => (
+    <>
+        <Title children="Title"/>
+    </>
+)

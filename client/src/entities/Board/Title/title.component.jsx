@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from './title.view'
 
-const Title = () => <View>
-    Project title
+const Title = ({ children }) => <View>
+    {children}
 </View>

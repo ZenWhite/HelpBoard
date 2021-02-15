@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Board = () => (
+export const BoardPage = () => (
   <div className="wrap">
-    <h1 className="board-title">Project title</h1>
+    <h1 className="board-title">Project</h1>
   </div>
 )
