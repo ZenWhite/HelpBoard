@@ -21,7 +21,7 @@ API for creating a task which can relates to tasklist
 ### Description
 
 ```
-All APIs implements basic some CRUD operations for entities
+All APIs implements some basic CRUD operations for entities
 
 GET | POST | PUT | DELETE
 ```
