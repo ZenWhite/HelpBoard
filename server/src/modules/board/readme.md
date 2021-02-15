@@ -30,7 +30,6 @@ PARAMS where
 
 BODY where
   title: String | Empty
-  lists: List of Tasklist | Empty
 ```
 
 ## DELETE
