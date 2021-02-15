@@ -1,18 +1,18 @@
 # APIs
 
-## [BOARD](/board/readme.md)
+## [BOARD](https://github.com/ZenWhite/HelpBoard/tree/main/server/src/modules/board#board-api)
 
 ```
 API for creating a board
 ```
 
-## [TASKLIST](/tasklist/readme.md)
+## [TASKLIST](https://github.com/ZenWhite/HelpBoard/tree/main/server/src/modules/tasklist#tasklist-api)
 
 ```
 API for creating a tasklist which can relates to board
 ```
 
-## [TASK](/task/readme.md)
+## [TASK](https://github.com/ZenWhite/HelpBoard/tree/main/server/src/modules/task#task-api)
 
 ```
 API for creating a task which can relates to tasklist
