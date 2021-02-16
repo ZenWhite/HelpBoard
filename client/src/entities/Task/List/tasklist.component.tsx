@@ -1,5 +1,6 @@
-import { CommonList } from '../Common/common-list.component'
-import { CommonListItem } from '../Common/common-listitem.component'
+import React, { FC } from 'react'
+import { CommonList } from '../../Common/list.component'
+import { CommonListItem } from '../../Common/listitem.component'
 
 const tasks = [
   { task: 'askflskdg' },
@@ -8,7 +9,7 @@ const tasks = [
   { task: 'askflskdg' }
 ]
 
-export const TaskList = () => (
+export const TaskList: FC = () => (
   <CommonList>
     {tasks.map((task) => (
       <CommonListItem children={task.task} />
