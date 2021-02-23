@@ -1,18 +1,25 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { View, ViewProps } from './limiter.view'
 
-type ComponentProps = { className: string } & ViewProps
+type ViewProps = {
+  column?: boolean
+  center?: boolean,
+  fill?: boolean
+}
 
-export const ContentLimiterView: FC<ComponentProps> = ({ children, className }) => <div className={className}>
-    {children}
+type ComponentProps = { className?: string }
+
+const Component: FC<ComponentProps> = ({ children, className }) => <div className={className}>
+  {children}
 </div>
 
-const ContentLimiter = styled(ContentLimiterView)`
+export const ContentLimiter = styled(Component) <ViewProps>`
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1320px;
+  max-width: ${p => p.theme.maxWidth};
   display: flex;
 
   ${p => p.column && 'flex-flow: column nowrap;'}
+  ${p => p.center && 'align-items: center;'}
+  ${p => p.fill && 'justify-content: space-between;'}
 `

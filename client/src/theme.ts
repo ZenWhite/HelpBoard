@@ -19,6 +19,7 @@ const color = {
 
 export const theme = {
     fz,
-    color
+    color,
+    maxWidth: "1320px"
 }
 
