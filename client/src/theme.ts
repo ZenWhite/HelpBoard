@@ -1,11 +1,18 @@
 const fz = {
-    h1: '48',
-    h2: '36',
-    h3: '24',
-    p: '18',
-    span: '15',
-    interaction: '18',
-    navigation: '16'
+    h1: "48px",
+    h2: "36px",
+    h3: "24px",
+    p: "18px",
+    span: "15px",
+    interaction: "18px",
+    navigation: "16px"
+}
+
+const fw = {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700
 }
 
 const color = {
@@ -19,6 +26,7 @@ const color = {
 
 export const theme = {
     fz,
+    fw,
     color,
     maxWidth: "1320px"
 }
