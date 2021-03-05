@@ -4,7 +4,8 @@
         "jsx": "react",
         "baseUrl": "./client/src",
         "paths": {
-          "~*": ["./*"]
+          "~*": ["./*"],
+          "@icons/*": ["./client/src/static/*"]
         },
         "esModuleInterop": true
     },

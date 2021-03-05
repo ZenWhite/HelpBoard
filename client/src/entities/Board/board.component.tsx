@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { Title } from './Title/title.component'
 
-export const Board = () => (
+export const Board: FC = () => (
   <>
     <Title children="My Title" />
   </>
