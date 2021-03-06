@@ -1,5 +1,6 @@
 import {
   BadRequestException,
+  ConflictException,
   Injectable,
   NotFoundException
 } from '@nestjs/common'
@@ -8,6 +9,7 @@ import {
   UpdateUserEntityDTO
 } from 'src/database/dto/user.entity.dto'
 import { UserRepository } from 'src/database/entities/user/user.repository'
+import { UsingJoinColumnOnlyOnOneSideAllowedError } from 'typeorm'
 
 @Injectable()
 export class UserService {
@@ -27,9 +29,14 @@ export class UserService {
   }
 
   async createUser(data: CreateUserEntityDTO) {
-    const created = await this.userRepository.create({ ...data })
-
-    if (created) return created
+    try {
+      return await this.userRepository.save(data)
+    } catch (error) {
+      if (error.code === '23505')
+        throw new ConflictException(
+          `Cannot create user with already busy email: ${data.email}`
+        )
+    }
   }
 
   async updateUser(id: string, data: UpdateUserEntityDTO) {
