@@ -1,5 +1,5 @@
 import { IsEmail, IsNotEmpty, IsOptional, IsUUID } from 'class-validator'
-import { BaseEntityDTO } from './base.entity.dto'
+import { BaseEntityDTO } from './base.dto'
 
 export class UserEntityDTO extends BaseEntityDTO {
   name: string

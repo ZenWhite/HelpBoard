@@ -13,7 +13,7 @@ import {
 import {
   CreateUserEntityDTO,
   UpdateUserEntityDTO
-} from 'src/database/dto/user.entity.dto'
+} from 'src/database/dto/user.dto'
 import { UserService } from './user.service'
 
 @Controller('users')
