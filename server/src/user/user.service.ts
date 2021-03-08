@@ -37,7 +37,7 @@ export class UserService {
     const hashed = await this.__hashPassword(data.password, salt)
 
     try {
-      return await this.userRepository.save({ ...data, salt, password: hashed })
+      return await this.userRepository.save({ ...data, password: hashed })
     } catch (error) {
       if (error.code === '23505')
         throw new ConflictException(
