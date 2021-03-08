@@ -33,7 +33,7 @@ export class UserService {
   }
 
   public async createUser(data: CreateUserEntityDTO) {
-    const salt = await bcrypt.genSalt()
+    const salt = process.env.USER_SALT
     const hashed = await this.__hashPassword(data.password, salt)
 
     try {

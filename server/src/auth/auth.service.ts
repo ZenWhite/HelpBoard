@@ -19,7 +19,8 @@ export class AuthService {
     const found = await this.userRepository.findOne({ email })
 
     if (found) {
-      const hash = await bcrypt.hash(password, found.salt)
+      const salt = process.env.USER_SALT
+      const hash = await bcrypt.hash(password, salt)
 
       return hash === found.password
     } else throw new NotFoundException(`Cannot get user with email: ${email}`)
