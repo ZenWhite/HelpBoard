@@ -8,6 +8,6 @@ type AuthButtonProps = {
 }
 
 export const AuthButton: FC<AuthButtonProps> = ({ login, registration }) => <View>
-    {login && 'Sign In'}
-    {registration && 'Sign Up'}
+    {login && 'Вход'}
+    {registration && 'Регистрация'}
 </View> 

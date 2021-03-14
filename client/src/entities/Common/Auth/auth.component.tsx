@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, SyntheticEvent, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { AuthButton } from './AuthButton/auth-button.component'

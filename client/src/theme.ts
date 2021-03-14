@@ -1,5 +1,5 @@
 const fz = {
-    h1: "48px",
+    h1: "42px",
     h2: "36px",
     h3: "24px",
     p: "18px",
