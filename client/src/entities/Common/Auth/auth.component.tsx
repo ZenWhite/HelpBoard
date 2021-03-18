@@ -6,10 +6,12 @@ import { Avatar } from '../Avatar/avatar.component'
 import { View, Link } from './auth.view'
 
 export const Auth: FC = () => {
-    return <View>
-        <AuthButton login />
-        <AuthButton registration />
+  return (
+    <View>
+      <AuthButton login />
+      <AuthButton registration />
     </View>
+  )
 }
 
 /*

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
 
-import { Title } from '../../entities/Typography/Title/title.component'
+import { Headline } from '../../entities/Typography/Headline/headline.component'
 
-export const BoardPage: FC = () => <Title>Название доски</Title>
+export const BoardPage: FC = () => <Headline>Название доски</Headline>

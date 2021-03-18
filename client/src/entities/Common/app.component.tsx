@@ -12,7 +12,7 @@ export const App: FC = () => (
   <ThemeProvider theme={theme}>
     <Header />
 
-    <ContentLimiter>
+    <ContentLimiter column>
       <BrowserRouter>
         <Switch>
           <Route path="/" component={DashboardPage} exact />
@@ -20,5 +20,5 @@ export const App: FC = () => (
         </Switch>
       </BrowserRouter>
     </ContentLimiter>
-  </ThemeProvider >
+  </ThemeProvider>
 )
