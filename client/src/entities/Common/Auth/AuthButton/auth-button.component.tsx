@@ -1,15 +1,12 @@
 import React, { FC } from 'react'
+import { Button } from '~entities/Common/Button/button.component'
 
 import { View } from './auth-button.view'
 
 type AuthButtonProps = {
-  login?: boolean
-  registration?: boolean
+  isLogin?: boolean
 }
 
-export const AuthButton: FC<AuthButtonProps> = ({ login, registration }) => (
-  <View>
-    {login && 'Вход'}
-    {registration && 'Регистрация'}
-  </View>
-)
+export const AuthButton: FC<AuthButtonProps> = ({ isLogin }) => <View>
+  <Button outline={isLogin}>{ isLogin ? "Войти" : "Регистрация" }</Button>
+</View>

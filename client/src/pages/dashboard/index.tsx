@@ -6,7 +6,7 @@ import { BoardPreview } from '../../entities/Board/Preview/preview.component'
 const mockBoards = [
   {
     id: 'sdfjksfkeiru234',
-    src: '1',
+    src: '/board/1',
     title: 'Доска 1',
     createdAt: '05.03.21'
   }

@@ -8,8 +8,8 @@ import { View, Link } from './auth.view'
 export const Auth: FC = () => {
   return (
     <View>
-      <AuthButton login />
-      <AuthButton registration />
+      <AuthButton isLogin />
+      <AuthButton />
     </View>
   )
 }
