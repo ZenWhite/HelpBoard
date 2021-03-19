@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { Title } from '../Typography/Headline/headline.component'
+import { Headline1 } from '../Typography/Headline1/headline1.component'
 
 export const Board: FC = () => (
   <>
