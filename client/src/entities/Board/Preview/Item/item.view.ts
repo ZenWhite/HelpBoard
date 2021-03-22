@@ -7,7 +7,7 @@ export const View = styled.a`
   align-items: flex-end;
   justify-content: space-between;
 
-  border-radius: ${(p) => p.theme.br};
+  border-radius: ${(p) => p.theme.br.normal};
 
   background: ${(p) => p.theme.color.gray};
   color: ${(p) => p.theme.color.white};

@@ -7,6 +7,8 @@ type AuthButtonProps = {
   isLogin?: boolean
 }
 
-export const AuthButton: FC<AuthButtonProps> = ({ isLogin }) => <View>
-  <Button outline={isLogin}>{ isLogin ? "Войти" : "Регистрация" }</Button>
-</View>
+export const AuthButton: FC<AuthButtonProps> = ({ isLogin }) => (
+  <View>
+    <Button outline={isLogin}>{isLogin ? 'Войти' : 'Регистрация'}</Button>
+  </View>
+)

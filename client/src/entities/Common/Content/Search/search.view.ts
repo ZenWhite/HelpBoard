@@ -7,13 +7,7 @@ export const View = styled.form`
   display: flex;
   align-items: center;
   background: ${(p) => p.theme.color.grayLight};
-  border-radius: 8px;
-
-  svg {
-    max-height: 40%;
-    fill: ${(p) => p.theme.color.gray};
-    margin-right: 16px;
-  }
+  border-radius: ${(p) => p.theme.br.normal}; ;
 `
 
 export const Input = styled.input`
@@ -24,6 +18,21 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+  }
+`
+
+export const Label = styled.label`
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+
+  svg {
+    max-height: 40%;
+    fill: ${(p) => p.theme.color.gray};
+    cursor: pointer;
   }
 `
 

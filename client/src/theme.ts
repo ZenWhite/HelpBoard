@@ -1,7 +1,7 @@
 const fz = {
   h1: '42px',
   h2: '36px',
-  h3: '24px',
+  h3: '20px',
   p: '18px',
   span: '15px',
   interaction: '18px',
@@ -24,11 +24,16 @@ const color = {
   white: '#FAFAFA'
 }
 
+const br = {
+  small: '4px',
+  normal: '8px'
+}
+
 export const theme = {
   fz,
   fw,
   color,
   maxWidth: '1320px',
-  br: '8px', // Border Radius
+  br,
   at: '550ms' // Animation Time
 }
