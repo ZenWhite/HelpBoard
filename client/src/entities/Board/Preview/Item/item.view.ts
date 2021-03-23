@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const View = styled.a`
   padding: 1rem;
 
+  height: 100%;
+
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

@@ -35,5 +35,5 @@ export const theme = {
   color,
   maxWidth: '1320px',
   br,
-  at: '550ms' // Animation Time
+  at: '400ms' // Animation Time
 }

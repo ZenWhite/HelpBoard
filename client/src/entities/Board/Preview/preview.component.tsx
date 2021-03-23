@@ -10,7 +10,9 @@ type BoardPreviewProps = {
 export const BoardPreview: FC<BoardPreviewProps> = ({ boards }) => (
   <View>
     {boards.map(({ src, id, title, createdAt }) => (
-      <PreviewItem src={src} key={id} children={title} createdAt={createdAt} />
+      <li key={id}>
+        <PreviewItem src={src} children={title} createdAt={createdAt} />
+      </li>
     ))}
   </View>
 )
