@@ -13,7 +13,13 @@ const mockLists = [
   {
     id: 'list-2345',
     title: 'В планах',
-    tasks: []
+    tasks: [
+      {
+        id: 'task-12345',
+        text: 'Прочитать литературу',
+        labels: []
+      }
+    ]
   },
   {
     id: 'list-2346',
