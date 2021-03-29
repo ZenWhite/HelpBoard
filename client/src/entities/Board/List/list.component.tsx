@@ -1,27 +1,23 @@
 import React, { FC } from 'react'
 
 import { View, ListHeadline } from './list.view'
-import { Headline3 } from '~entities/Typography/Headline3/headline3.component'
 import { BoardTask } from '../Task/task.component'
+import { Task } from '../Task/task'
+import { CommonList } from '../../Common/List/list.component'
 
-type TList = {
+type List = {
   id: string
   title: string
   tasks: Array<any>
 }
 
-type BoardListProps = {
-  list: TList
-}
+export const BoardList: FC<{ list: List }> = ({ children, list }) => {
+  const renderTask = (task: Task) => <BoardTask task={task} />
 
-export const BoardList: FC<BoardListProps> = ({ children, list }) => {
-  console.log(list)
   return (
     <View>
       <ListHeadline>{list.title}</ListHeadline>
-      {list.tasks.map((task) => (
-        <BoardTask task={task} key={task.id} />
-      ))}
+      <CommonList render={renderTask} items={list.tasks} />
     </View>
   )
 }
