@@ -1,3 +1,47 @@
 import React, { FC } from 'react'
 
-export const Board: FC = () => null
+import { View } from './board.view'
+import { Headline1 } from '../Typography/Headline1/headline1.component'
+import { BoardListContainer } from './ListContainer/list-container.component'
+
+const mockBoard = {
+    id: 'sdfjksfkeiru234',
+    title: 'Доска 1',
+    createdAt: '05.03.21'
+  }
+  
+  const mockLists = [
+    {
+      id: 'list-2345',
+      title: 'В планах',
+      tasks: [
+        {
+          id: 'task-12345',
+          text: 'Прочитать литературу',
+          labels: []
+        }
+      ]
+    },
+    {
+      id: 'list-2346',
+      title: 'В работе',
+      tasks: []
+    },
+    {
+      id: 'list-2347',
+      title: 'Сделано',
+      tasks: []
+    }
+]
+
+type BoardProps = {
+    title?: string,
+    taskLists?: Array<any>
+}
+
+export const Board: FC<BoardProps> = ({ title, taskLists }) => {
+    return <View>
+        <Headline1>{mockBoard.title}</Headline1>
+        <BoardListContainer lists={mockLists} />
+    </View>
+}

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const View = styled.ul`
+export const View = styled.section`
   margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(3, 320px);

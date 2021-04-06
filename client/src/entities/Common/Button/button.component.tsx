@@ -8,11 +8,12 @@ type ViewProps = {
 
 type ComponentProps = {
   className?: string
-  action?: (e: SyntheticEvent<HTMLButtonElement>) => void
+  action?: (e: SyntheticEvent<HTMLButtonElement>) => void,
+  type?: "button" | "submit" | "reset"
 }
 
-const Component: FC<ComponentProps> = ({ children, className, action }) => (
-  <button onClick={action} className={className}>
+const Component: FC<ComponentProps> = ({ children, className, action, type }) => (
+  <button type={type} onClick={action} className={className}>
     {children}
   </button>
 )

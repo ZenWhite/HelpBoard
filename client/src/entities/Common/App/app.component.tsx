@@ -7,18 +7,23 @@ import { BoardPage } from '~pages/board/index'
 import { ContentLimiter } from '../Content/Limiter/limiter.component'
 import { Header } from '../Header/header.component'
 import { theme } from '~theme'
+import { LoginPage } from '~pages/login/index'
+import { RegistrationPage } from '~pages/registration/index'
 
 export const App: FC = () => (
   <ThemeProvider theme={theme}>
-    <Header />
+    <BrowserRouter>
+      <Header />
 
-    <ContentLimiter column>
-      <BrowserRouter>
+      <ContentLimiter column>
         <Switch>
           <Route path="/" component={DashboardPage} exact />
           <Route path="/board/:id" component={BoardPage} />
+          <Route path="/login" component={LoginPage}/>
+          <Route path="/registration" component={RegistrationPage}/>
         </Switch>
-      </BrowserRouter>
-    </ContentLimiter>
+      </ContentLimiter>
+      
+    </BrowserRouter>
   </ThemeProvider>
 )

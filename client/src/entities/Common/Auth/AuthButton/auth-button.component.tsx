@@ -1,14 +1,13 @@
 import React, { FC } from 'react'
-import { Button } from '~entities/Common/Button/button.component'
+import { Link } from 'react-router-dom'
 
+import { Button } from '~entities/Common/Button/button.component'
 import { View } from './auth-button.view'
 
-type AuthButtonProps = {
-  isLogin?: boolean
-}
-
-export const AuthButton: FC<AuthButtonProps> = ({ isLogin }) => (
+export const AuthButton: FC<{ isLogin?: boolean }> = ({ isLogin }) => (
   <View>
-    <Button outline={isLogin}>{isLogin ? 'Войти' : 'Регистрация'}</Button>
+    <Link to={`/${ isLogin ? 'login' : 'registration' }`}>
+      <Button outline={isLogin}>{isLogin ? 'Войти' : 'Регистрация'}</Button>
+    </Link>
   </View>
 )
