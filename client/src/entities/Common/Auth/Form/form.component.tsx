@@ -13,7 +13,16 @@ const Login: FC = () => <>
         <Button type="submit">Войти</Button>
     </View>
 </>
-const Registration: FC = () => <>reg</>
+const Registration: FC = () => <>
+    <Headline1>Регистрация</Headline1>
+    <View>
+        <CommonInput placeholder="Имя"/>
+        <CommonInput placeholder="Email"/>
+        <CommonInput placeholder="Пароль"/>
+        <CommonInput placeholder="Повторите пароль"/>
+        <Button type="submit">Войти</Button>
+    </View>
+</>
 
 export const AuthForm: FC<{isLogin ?: boolean}> = ({isLogin}) =>
     isLogin ? <Login /> : <Registration />

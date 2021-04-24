@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 
-import { View } from './preview.view'
+import { View, PreviewList } from './preview.view'
 import { PreviewItem } from './Item/item.component'
-import { CommonList } from '~entities/Common/List/list.component'
 
 type PreviewItem = {
   id: string,
@@ -21,7 +20,7 @@ export const BoardPreview: FC<BoardPreviewProps> = ({ boards }) => {
   }
   return (
     <View>
-     <CommonList items={boards} render={renderPreviewItem} />
+      <PreviewList items={boards} render={renderPreviewItem} />
     </View>
   )
 }

@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-
-import { View, ListItem } from './list.view'
+import styled from 'styled-components'
 
 interface Item {
   id: string
@@ -9,13 +8,18 @@ interface Item {
 
 type CommonListProps = {
   render(item: { [key: string]: any }): JSX.Element
-  items: Array<Item>
+  items: Array<Item>,
+  className?: string
 }
 
-export const CommonList: FC<CommonListProps> = ({ render, items }) => (
-  <View>
+const Component: FC<CommonListProps> = ({ render, items, className }) => (
+  <ul className={className}>
     {items.map((item) => (
-      <ListItem key={item.id}>{render(item)}</ListItem>
+      <li key={item.id}>{render(item)}</li>
     ))}
-  </View>
+  </ul>
 )
+
+export const CommonList = styled(Component)`
+  list-style: none;
+`

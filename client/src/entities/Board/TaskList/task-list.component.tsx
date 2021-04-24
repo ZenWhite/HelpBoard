@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { View, ListHeadline } from './list.view'
+import { View, ListHeadline } from './task-list.view'
 import { BoardTask } from '../Task/task.component'
 import { Task } from '../Task/task'
 import { CommonList } from '../../Common/List/list.component'
@@ -11,7 +11,7 @@ type List = {
   tasks: Array<any>
 }
 
-export const BoardList: FC<{ list: List }> = ({ children, list }) => {
+export const BoardTaskList: FC<{ list: List }> = ({ list }) => {
   const renderTask = (task: Task) => <BoardTask task={task} />
 
   return (

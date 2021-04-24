@@ -1,5 +1,5 @@
 export type Task = {
-  id: string
-  text: string
-  labels: Array<{ text: string }>
+    id: string
+    text: string
+    labels: Array<{ text: string }>
 }

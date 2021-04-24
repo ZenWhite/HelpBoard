@@ -2,4 +2,7 @@ import React, { FC } from 'react'
 
 import { View } from './input.view'
 
-export const CommonInput: FC<{placeholder?: string}> = ({ placeholder = '' }) => <View placeholder={placeholder}/> 
+//type InputProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLInputElement>, HTMLInputElement>
+
+export const CommonInput: FC<{placeholder: string}> = 
+    ({ placeholder = '' }) => <View placeholder={placeholder}/> 
